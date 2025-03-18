@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05</title>
+</head>
+<body>
+    <h1> Principais Formatações </h1>
+    <h2> Negrito / Destaque </h2>
+    <p> Na frase temos uma <b> parte do texto em negrito </b> usando a tag B (não semântica)</p> <!-- usar o P quando for deixar em negrito -->
+    <p> Na frase temos uma <strong> parte do texto em negrito </strong> usado a tag strong (com semântica) </p>
+    <br>
+    <h2> Itálico / Ênfase </h2>
+    <p> Nesta frase vamos entrar com uma palavra em <i> itálico </i> usando a tag i (não semântica)</p>
+    <p> Nesta frase vamos entrar com uma plavra em <EM> itálico </EM> usando a tag EM (com semnântica)</p>
+    <br>
+    <h2> Texto Marcador </h2>
+    <p> Aqui vamos  usar um texto com destaque <mark style="background:#FFC0CB;">de marcador de texto</mark> usando mark </p>
+    <p> Aqui vamos  usar um texto com destaque <mark style="background:#e62948;">de marcador de texto</mark> usando mark </p>
+    <br>
+    <h2> Texto Grande e Pequeno </h2>
+    <p> Estamos trabalhando aqui com um <big> texto grande </big> e um texto <small> pequeno </small> nesta frase </p>
+    <br>
+    <h2> Texto Deletado </h2>
+    <p> Neste paragrafo vamos trabalhar com um texto <del> que foi excluido </del> da frase (forma semântica) </p>
+    <br>
+    <h2> Texto Inserido </h2>
+    <P> Nesta frase vamos demonstrar como <u>destacar um texto inserido</u> na frase de forma semântica </P>
+    <P> Nesta frase vamos demonstrar como <ins>destacar um texto inserido</ins> na frase de forma semântica </P>
+    <br>
+    <h2> Texto Sobrescrito </h2>
+    <p> Vamos demostrar uma formula da equação do segundo grau ax <sup>2</sup> + bx + c = 0 usando tag sup </p> 
+    <br>
+    <h2> Texto Subescrito </h2>
+    <p> Vamos demostrar o texto subescrito com a formula da água H <sup>2</sup>O</p>
+    <br>
+    
+    
+    <h2> Trecho de Código Fonte </h2>
+    <p> Neste exemplo vou demosntrar um trecho de Código </p>
+    <p> Inserido o comando <small> document.getElementById('edtCodigo') </small>  que é um comando java script </p>
+    <p> Inserido um longo codigo em python:</p>
+  
+    
+    <pre>
+        <code>
+        import pandas as pd
+        import numpy as np
+        
+        def remover_outliers(df):
+            """
+            Função para remover outliers de um DataFrame baseado no método de IQR (Intervalo Interquartil).
+            Args:
+            df (pd.DataFrame): O DataFrame de entrada com os dados.
+        
+            Returns:
+            pd.DataFrame: O DataFrame sem os outliers.
+            """
+            # Criação de um novo DataFrame para não modificar o original
+            df_sem_outliers = df.copy()
+            
+            # Para cada coluna numérica, calcular o IQR e remover outliers
+            for coluna in df.select_dtypes(include=[np.number]).columns:
+                # Calcular Q1 (25º percentil) e Q3 (75º percentil)
+                Q1 = df[coluna].quantile(0.25)
+                Q3 = df[coluna].quantile(0.75)
+                
+                # Calcular o IQR (Intervalo Interquartil)
+                IQR = Q3 - Q1
+                
+                # Definir limites inferior e superior
+                limite_inferior = Q1 - 1.5 * IQR
+                limite_superior = Q3 + 1.5 * IQR
+                
+                # Filtrar os valores que estão dentro dos limites
+                df_sem_outliers = df_sem_outliers[(df_sem_outliers[coluna] >= limite_inferior) & 
+                                                (df_sem_outliers[coluna] <= limite_superior)]
+            
+            return df_sem_outliers
+        
+        # Exemplo de uso com um DataFrame fictício
+        if __name__ == "__main__":
+            # Criar um DataFrame de exemplo com valores artificiais
+            data = {
+                'coluna1': [1, 2, 3, 4, 5, 100, 6, 7, 8, 9],
+                'coluna2': [10, 15, 14, 13, 1000, 15, 14, 15, 16, 17],
+                'coluna3': [100, 200, 150, 300, 400, 5000, 600, 700, 800, 900]
+            }
+            df = pd.DataFrame(data)
+        
+            print("DataFrame original:")
+            print(df)
+        
+            # Remover outliers
+            df_sem_outliers = remover_outliers(df)
+        
+            print("\nDataFrame após remoção dos outliers:")
+            print(df_sem_outliers)
+        <code>
+        </pre>
+    
+        <h2>Citações (quotation) Simples</h2>
+        <p> Segundo Steve Jobs <q>A tecnologia move o mundo</q></p>
+        <br>
+        <h2> Citações Completas (Livros) </h2>
+        <p>Segundo Sandra Kussunoki no seu livro A dança e o ventre:</p>
+        <blockquote>Dados existentes sobre intervenções cirúrgicas nos corpos contemporâneos visanodo à obtenção de um corpo mais próximo do padrão estético tais como lipoaspiração, próteses de silicone, entre outras, comprovam essa busca obsessiva pelo ideal de perfeição, que é baseado principalmente na magreza.</blockquote>
+        <br>
+        <h2> Abreviações </h2>
+        <p> Estamos estudando HTML e CSS </p>
+        <br>
+        <h2> Texto Invertido </h2>
+        <p> Estou estudando HTML </p>
+        <p> LMTH odnadutse uotsE </p>
+        
+        
+</body>
+</html>
