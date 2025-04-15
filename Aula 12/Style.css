@@ -1,0 +1,42 @@
+body { 
+    background-color: hsl(210, 62%, 51%);
+    margin:15em;
+    background-image: linear-gradient(to bottom right, rgb(85, 179, 216), rgb(27, 138, 182));
+
+     }
+
+    h1 { color: hsl(207, 84%, 52%); 
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow: 0.5px 0.5px 0.5px #0e5e91;
+       }
+
+
+    h2 { color: hsl(207, 71%, 60%);
+        font-family: Arial, Helvetica, sans-serif;
+       }
+
+    p { color: hsl(0, 0%, 0%);  
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+
+
+
+      .Quadradinho {
+        background-color: aliceblue;
+        border-radius: 3em;
+        padding: 4em;
+        box-shadow: 30px 30px 30px #0869A6;
+        width: 600px;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+ 
+}
+    
+        
+        
+    
