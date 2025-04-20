@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviço</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        table, th, td {
+          border: 2px solid; /* Bordas como no seu exemplo */
+        }
+        td {
+          text-align: center; /* Centraliza o texto horizontalmente */
+          vertical-align: middle; /* Centraliza o conteúdo verticalmente */
+          padding: 8px; /* Espaçamento interno para melhor visualização */
+        }
+    
+
+      .chat-container {
+      width: 350px;
+      height: auto;
+      border-radius: 20px;
+      background-image: url("imagem.jfif");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      overflow: hidden;
+    }
+
+    .chat-container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .message,
+    .audio-box {
+      position: relative;
+      z-index: 1;
+    }
+
+    .message {
+      max-width: 80%;
+      padding: 10px 15px;
+      border-radius: 15px;
+      background-color: #25d366;
+      color: #000;
+      align-self: flex-start;
+    }
+
+    .message.user {
+      background-color: #075e54;
+      color: #fff;
+      align-self: flex-end;
+    }
+
+    .audio-box {
+      margin-top: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .audio-box audio {
+      width: 100%;
+    }
+
+
+----
+
+    .voltar-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #cccccc;
+        color: #333;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      
+      .voltar-link:hover {
+        background-color: #e0e0e0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      }
+
+      </style>
+
+
+</head>
+</body>
+<div class="container">
+    <h1>Serviços</h1>
+<p>Oferecemos serviços profissionais de criação de páginas web utilizando HTML e CSS, ideais para quem busca um site leve, rápido e com visual moderno. Atendemos diferentes necessidades, desde páginas simples até sites personalizados com mais funcionalidades.</p>
+<p>Confira abaixo nossas opções e preços:</p>
+<br>
+<table>
+    <tr>
+        <th>Quantidade de páginas</th>
+        <th>Página Estática</th>
+        <th>Página Dinâmica</th>
+        <th>Página Avançada</th>
+    </tr>
+
+    <tr>
+        <td>1 a 2</td>
+        <td>R$ 400 – R$ 2.000</td>
+        <td>R$ 2.000 – R$ 3.000</td>
+        <td>R$ 3.000 – R$ 5.000</td>
+    </tr>
+
+    <tr>
+        <td>3 a 5</th>
+        <td>R$ 1.500 – R$ 3.000</td>
+        <td>R$ 3.000 – R$ 7.000</td>
+        <td>R$ 7.000 – R$ 15.000</td>
+    </tr>
+
+    <tr>
+        <td>Mais de 5</td>
+        <td>R$ 2.500 – R$ 10.000</td>
+        <td>R$ 7.000 – R$ 15.000</td>
+        <td>R$ 15.000 – R$ 50.000+</td>
+    </tr>
+
+    <tr>
+        <td>O que são:</td>
+        <td>Sites com com projetos com design exclusivo, funcionalidades específicas, integração com sistemas externos e recursos avançados e conteúdo fixo, geralmente sem painel de administração.</td>
+        <td>Inclui funcionalidades como blog, galeria de imagens e painel de administração básico.</td>
+        <td>Projetos com design exclusivo, funcionalidades específicas, integração com sistemas externos e recursos avançados</td>
+    </tr>
+</table>
+    
+<br>
+
+    <p>Oferecemos soluções personalizadas para diversos segmentos do mercado, criando sites modernos, responsivos e com foco em resultados. Seja qual for o seu ramo, temos a estrutura ideal para destacar sua presença online. Confira alguns exemplos:</p>
+    <p>🍽 Restaurantes e Cafeterias: cardápio online, reservas, localização, integração com apps de delivery.</p>
+    <p>🏋️ Academias e Estúdios de Treinamento: horários de aulas, planos, agendamentos e blog com dicas de saúde.</p>
+    <p>📚 Livrarias e Papelarias: catálogo virtual, e-commerce, lançamentos e área para promoções.</p>
+    <p>🛍 Comércios Locais: apresentação de produtos/serviços, contato rápido via WhatsApp, localização e redes sociais.</p>
+    <p>🧑‍⚕️ Clínicas e Profissionais da Saúde: marcação de consultas, informações sobre tratamentos e currículos dos profissionais.</p>
+    <p>Desenvolvemos desde sites simples e institucionais até portais mais robustos com recursos dinâmicos e personalizados, sempre com design profissional, boa performance e navegação intuitiva.</p>
+
+<br>
+
+    <p>Clique <a href="./feedbacks.html" target="_blank" style="color: inherit; text-decoration: underline;">AQUI</a> para ver um feedback</p>
+<br>
+<br>
+<br>
+
+<a href="./../Index.html" class="voltar-link">Voltar</a>
+</div>
+</body> 
+</html>

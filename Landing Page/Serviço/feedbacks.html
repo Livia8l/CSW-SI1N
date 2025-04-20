@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedbacks</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #000000, #888888, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .chat-container {
+      width: 350px;
+      height: auto;
+      border-radius: 20px;
+      background-image: url("imagem.jfif");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      overflow: hidden;
+    }
+
+    .chat-container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .message,
+    .audio-box {
+      position: relative;
+      z-index: 1;
+    }
+
+    .message {
+      max-width: 80%;
+      padding: 10px 15px;
+      border-radius: 15px;
+      background-color: #25d366;
+      color: #000;
+      align-self: flex-start;
+    }
+
+    .message.user {
+      background-color: #075e54;
+      color: #fff;
+      align-self: flex-end;
+    }
+
+    .audio-box {
+      margin-top: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .audio-box audio {
+      width: 100%;
+    }
+
+  </style>
+
+
+</head>
+<body>
+  <div class="chat-container">
+    <div class="message user">O site ficou incrível! Superou minhas expectativas 👏</div>
+    <div class="message">Fico feliz que tenha gostado! 😄</div>
+    <div class="message user">A navegação tá muito rápida. E o visual tá moderno demais!</div>
+    <div class="message">Obrigado! Se precisar de atualizações, é só chamar.</div>
+
+    <div class="audio-box">
+      <p>Feedback por áudio:</p>
+      <audio controls>
+        <source src="./WhatsApp Audio 2025-04-20 at 15.43.48.mp4" type="audio/mpeg">
+      </audio>
+
+
+</body>
+</html>
